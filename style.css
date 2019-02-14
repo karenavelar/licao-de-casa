@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    overflow-x: hidden;
 }
 #estruturaGrid{
     display: grid;
@@ -15,14 +16,15 @@ header{
     grid-area: header;
     background-color: #2CC96E;
     display: flex;
-    align-items: flex-end;
+    justify-content: space-around;
+    background-image: url("img/header-banner.png");
 }
-#img1{
+/* #img1{
     width: 100vw;
     max-width: 1518px;
     height: 97%;
-    /* background-size: cover; */
-}
+    background-size: cover; 
+} */
 #img2{
     width: 12%;
     justify-content: flex-end;
@@ -36,6 +38,22 @@ header{
     display: flex;
     color: white;
 }
+
+.icone{
+    background-color: rgba(15,15,15,0.5);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+header div:nth-child(0){/*pega a div que é a primeira filha do header*/
+    display: flex;
+    flex-direction: column;
+}
+header div:nth-child(1){
+    display: flex;
+    flex-direction: row;
+}
 nav{
     grid-area: nav;
     background-color: white;
@@ -43,10 +61,10 @@ nav{
     justify-content: space-around;
     align-items: center;
 }
-div{
+/* div{
     display: flex;
     width: 70%;
-}
+} */
 .div-pai{
     display: flex;
 }
